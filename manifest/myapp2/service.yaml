@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp2-service
+spec:
+  selector:
+    app: myapp2
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 5678

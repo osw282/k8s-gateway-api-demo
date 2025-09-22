@@ -1,0 +1,23 @@
+kind: GatewayConfiguration
+apiVersion: gateway-operator.konghq.com/v1beta1
+metadata:
+  name: kong
+  namespace: kong
+spec:
+  dataPlaneOptions:
+    deployment:
+      podTemplateSpec:
+        spec:
+          containers:
+          - name: proxy
+            image: kong:3.9.1 # this is the image being used for the data plane
+  controlPlaneOptions:
+    deployment:
+      podTemplateSpec:
+        spec:
+          containers:
+          - name: controller
+            image: kong/kubernetes-ingress-controller:3.5 # this is the image being used for the control plane
+            env:
+            - name: CONTROLLER_LOG_LEVEL # just an example of setting an environment variable
+              value: debug
