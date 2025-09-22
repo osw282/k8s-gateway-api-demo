@@ -94,7 +94,7 @@ Below is a simple visualisation of how an HTTP request will be routed with Gatew
 
 #### 4a. [namespace.yaml](manifest/gateway_api/namespace.yaml)
 
-This needs no explanation really. We're just creating a namespace for our Gateway API resources.
+This needs no explanation really. We're just creating a namespace named "kong" for our Gateway API resources.
 
 ```bash
 kubectl apply -f manifest/gateway_api/namespace.yaml
