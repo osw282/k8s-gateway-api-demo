@@ -59,7 +59,8 @@ Essentially, from the installation page, there are two main things we are instal
 2. Kong Gateway Operator: Installs the Kong Gateway Operator, which includes the Kong Ingress Controller (KIC). It also enables the CRDs so the operator can watch and reconcile Gateway/HTTPRoute, etc.
 
 
-Installing the Gateway API CRDs and Kong Gateway Operator:
+Installing the Gateway API CRDs and Kong Gateway Operator
+
 NOTE: The below will install Gateway API CRDs v1.3.0 and the Kong operator v1.6.1, which were the latest when I created this demo.
 ```bash
 # Install the gateway crds
